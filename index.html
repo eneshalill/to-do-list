@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to do list</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <h1>قائمة</h1>
+        <input type="text" id="iput" required="أدخل سؤالك" />
+        <button id="bttn">أضف</button>
+        <ul id="comein"></ul>l
+      </div>
+    </main>
+    <script>
+      const iput = document.getElementById ("iput");
+            const bttn = document.getElementById ("bttn");
+            const come = document.getElementById ("comein");
+
+            function ask()  {
+            const askMe = iput.value.trim();
+
+            if(askMe ==="") {
+                alert("أدخل سؤالك");
+            return;
+            }
+
+            const li = document.createElement("li");
+            li.innerText = askMe;
+            li.classList.add(
+                "list-group-item",
+            "d-flex",
+            "justify-content-between",
+            "align-items-center"
+            );
+
+            li.style.cursor = "pointer";
+
+            const bttn = document.createElement("button");
+
+            bttn.innerHTML="أحذف";
+            bttn.classList.add("btn", "btn-danger", "btn-sm");
+
+            btn.addEventListener("click", () => {
+            come.removeChild(li);
+            });
+
+            li.appendChild(bttn);
+
+            li.addEventListener("click", () => {
+            li.classList.toggle("enes");
+            });
+
+            come.appendChild(li);
+            iput.value="";
+            }
+
+            bttn.addEventListener("click", ask);
+
+            iput.addEventListener("keypress", (e) =>{
+                if(e.key ==="Enter"){
+                    ask();
+                }
+
+            });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+body {
+  min-height:100vh;
+}
+
+h1 {
+  color: rgb(245, 33, 33);
+}
+
+main {
+  margin-top: 300px;
+  text-align: center;
+}
+
+div input {
+  width: 25%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #658bdb;
+
+  border-radius: 10px;
+}
+
+#bttn {
+  width: 6%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #06840c;
+  border-radius: 10px;
+  background-color: #a2fba6;
+}
+li.enes {
+  text-decoration: line-through;
+  color: red;
+}
+li{
+    list-group-item
+}
+
+
